@@ -65,6 +65,14 @@ $config = [
                         'GET login' => 'login'
                     ],
                     'except' => ['delete']
+                ],
+                [
+                    'class' => 'yii\rest\UrlRule', 
+                    'controller' => 'server',
+                    'extraPatterns' => [
+                        'GET play' => 'play'
+                    ],
+                    'except' => ['delete']
                 ]
             ],
         ],

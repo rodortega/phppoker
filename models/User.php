@@ -11,12 +11,17 @@ class User extends ActiveRecord
     {
         return 'users';
     }
-    public function scenarios()
+
+    public function fields()
     {
-        $scenarios = parent::scenarios();
-        $scenarios['CREATE_USER'] = [];
-        $scenarios['UPDATE_USER'] = [];
-        return $scenarios;
+        return [
+            'id', 
+            'username', 
+            'first_name',
+            'last_name', 
+            'status',
+            'hand'
+        ];
     }
 
     public function attributes()
